@@ -14,7 +14,9 @@ const Hero: React.FC<HeroProps> = ({ onCitySearch }) => {
     'mumbai': 'mumbai',
     'bengaluru': 'bengaluru',
     'bangalore': 'bengaluru', // Alternative name
-    'hyderabad': 'hyderabad'
+    'hyderabad': 'hyderabad',
+    'vizag': 'vizag',
+    'visakhapatnam': 'vizag' // Alternative name
   };
 
   const handleSearch = (e: React.FormEvent) => {

@@ -187,6 +187,190 @@ const sampleProperties: Omit<Property, 'id' | 'createdAt' | 'updatedAt'>[] = [
     description: 'Affordable PG accommodation near IT companies in Hitech City.',
     ownerId: 'sample-owner-5',
     isActive: true
+  },
+  // Vizag Properties
+  {
+    name: 'Beach View PG',
+    address: 'RK Beach Road, Visakhapatnam, Andhra Pradesh 530003',
+    city: 'vizag',
+    price: 6500,
+    rating: 4.1,
+    images: [
+      'https://images.pexels.com/photos/271618/pexels-photo-271618.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      'https://images.pexels.com/photos/1743229/pexels-photo-1743229.jpeg?auto=compress&cs=tinysrgb&w=1200'
+    ],
+    gender: 'male',
+    amenities: {
+      building: [
+        { name: 'Power Backup', available: true },
+        { name: 'Fire Extinguisher', available: true },
+        { name: 'Lift', available: false },
+        { name: 'CCTV', available: true }
+      ],
+      commonArea: [
+        { name: 'WiFi', available: true },
+        { name: 'TV', available: true },
+        { name: 'Water Purifier', available: true },
+        { name: 'Dining', available: true },
+        { name: 'Washing Machine', available: false }
+      ],
+      bedroom: [
+        { name: 'Bed with Mattress', available: true }
+      ],
+      washroom: [
+        { name: 'Geyser', available: true }
+      ]
+    },
+    description: 'Comfortable PG accommodation with beautiful beach views, perfect for students and professionals.',
+    ownerId: 'sample-owner-6',
+    isActive: true
+  },
+  {
+    name: 'Coastal Comfort PG',
+    address: 'MVP Colony, Visakhapatnam, Andhra Pradesh 530017',
+    city: 'vizag',
+    price: 7200,
+    rating: 4.4,
+    images: [
+      'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      'https://images.pexels.com/photos/271618/pexels-photo-271618.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      'https://images.pexels.com/photos/1571468/pexels-photo-1571468.jpeg?auto=compress&cs=tinysrgb&w=1200'
+    ],
+    gender: 'female',
+    amenities: {
+      building: [
+        { name: 'Power Backup', available: true },
+        { name: 'Fire Extinguisher', available: true },
+        { name: 'Lift', available: true },
+        { name: 'CCTV', available: true }
+      ],
+      commonArea: [
+        { name: 'WiFi', available: true },
+        { name: 'TV', available: true },
+        { name: 'Water Purifier', available: true },
+        { name: 'Dining', available: true },
+        { name: 'Washing Machine', available: true }
+      ],
+      bedroom: [
+        { name: 'Bed with Mattress', available: true }
+      ],
+      washroom: [
+        { name: 'Geyser', available: true }
+      ]
+    },
+    description: 'Safe and secure accommodation for girls in MVP Colony with modern amenities and excellent connectivity.',
+    ownerId: 'sample-owner-7',
+    isActive: true
+  },
+  {
+    name: 'Port City PG',
+    address: 'Dwaraka Nagar, Visakhapatnam, Andhra Pradesh 530016',
+    city: 'vizag',
+    price: 5800,
+    rating: 3.9,
+    images: [
+      'https://images.pexels.com/photos/1743229/pexels-photo-1743229.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      'https://images.pexels.com/photos/1571453/pexels-photo-1571453.jpeg?auto=compress&cs=tinysrgb&w=1200'
+    ],
+    gender: 'unisex',
+    amenities: {
+      building: [
+        { name: 'Power Backup', available: true },
+        { name: 'Fire Extinguisher', available: true },
+        { name: 'Lift', available: false },
+        { name: 'CCTV', available: true }
+      ],
+      commonArea: [
+        { name: 'WiFi', available: true },
+        { name: 'TV', available: true },
+        { name: 'Water Purifier', available: true },
+        { name: 'Dining', available: true },
+        { name: 'Washing Machine', available: false }
+      ],
+      bedroom: [
+        { name: 'Bed with Mattress', available: true }
+      ],
+      washroom: [
+        { name: 'Geyser', available: true }
+      ]
+    },
+    description: 'Budget-friendly PG accommodation in Dwaraka Nagar, ideal for students and young professionals.',
+    ownerId: 'sample-owner-8',
+    isActive: true
+  },
+  {
+    name: 'Steel City PG',
+    address: 'Gajuwaka, Visakhapatnam, Andhra Pradesh 530026',
+    city: 'vizag',
+    price: 6800,
+    rating: 4.2,
+    images: [
+      'https://images.pexels.com/photos/1571468/pexels-photo-1571468.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      'https://images.pexels.com/photos/271618/pexels-photo-271618.jpeg?auto=compress&cs=tinysrgb&w=1200'
+    ],
+    gender: 'male',
+    amenities: {
+      building: [
+        { name: 'Power Backup', available: true },
+        { name: 'Fire Extinguisher', available: true },
+        { name: 'Lift', available: true },
+        { name: 'CCTV', available: true }
+      ],
+      commonArea: [
+        { name: 'WiFi', available: true },
+        { name: 'TV', available: true },
+        { name: 'Water Purifier', available: true },
+        { name: 'Dining', available: true },
+        { name: 'Washing Machine', available: true }
+      ],
+      bedroom: [
+        { name: 'Bed with Mattress', available: true }
+      ],
+      washroom: [
+        { name: 'Geyser', available: true }
+      ]
+    },
+    description: 'Well-maintained PG near industrial areas in Gajuwaka, perfect for working professionals.',
+    ownerId: 'sample-owner-9',
+    isActive: true
+  },
+  {
+    name: 'Lighthouse PG',
+    address: 'Kailasagiri, Visakhapatnam, Andhra Pradesh 530005',
+    city: 'vizag',
+    price: 7500,
+    rating: 4.5,
+    images: [
+      'https://images.pexels.com/photos/1571453/pexels-photo-1571453.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      'https://images.pexels.com/photos/1743229/pexels-photo-1743229.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1200'
+    ],
+    gender: 'female',
+    amenities: {
+      building: [
+        { name: 'Power Backup', available: true },
+        { name: 'Fire Extinguisher', available: true },
+        { name: 'Lift', available: true },
+        { name: 'CCTV', available: true }
+      ],
+      commonArea: [
+        { name: 'WiFi', available: true },
+        { name: 'TV', available: true },
+        { name: 'Water Purifier', available: true },
+        { name: 'Dining', available: true },
+        { name: 'Washing Machine', available: true }
+      ],
+      bedroom: [
+        { name: 'Bed with Mattress', available: true }
+      ],
+      washroom: [
+        { name: 'Geyser', available: true }
+      ]
+    },
+    description: 'Premium PG for girls near Kailasagiri with scenic hill views and top-notch amenities.',
+    ownerId: 'sample-owner-10',
+    isActive: true
   }
 ];
 

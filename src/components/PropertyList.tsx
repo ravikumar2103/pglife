@@ -24,7 +24,7 @@ const PropertyList: React.FC<PropertyListProps> = ({ city, onPropertyView, onBac
   const [likedProperties, setLikedProperties] = useState<Set<string>>(new Set());
 
   // Available cities
-  const availableCities = ['delhi', 'mumbai', 'bengaluru', 'hyderabad'];
+  const availableCities = ['delhi', 'mumbai', 'bengaluru', 'hyderabad', 'vizag'];
   
   // Check if the searched city is available
   const isCityAvailable = availableCities.includes(city.toLowerCase());
@@ -154,6 +154,62 @@ const PropertyList: React.FC<PropertyListProps> = ({ city, onPropertyView, onBac
       liked: false,
       gender: 'female',
       city: 'hyderabad'
+    },
+    // Vizag properties
+    {
+      id: '12',
+      name: 'Beach View PG',
+      address: 'RK Beach Road, Visakhapatnam, Andhra Pradesh 530003',
+      price: 6500,
+      rating: 4.1,
+      image: 'https://images.pexels.com/photos/271618/pexels-photo-271618.jpeg?auto=compress&cs=tinysrgb&w=800',
+      liked: false,
+      gender: 'male',
+      city: 'vizag'
+    },
+    {
+      id: '13',
+      name: 'Coastal Comfort PG',
+      address: 'MVP Colony, Visakhapatnam, Andhra Pradesh 530017',
+      price: 7200,
+      rating: 4.4,
+      image: 'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=800',
+      liked: false,
+      gender: 'female',
+      city: 'vizag'
+    },
+    {
+      id: '14',
+      name: 'Port City PG',
+      address: 'Dwaraka Nagar, Visakhapatnam, Andhra Pradesh 530016',
+      price: 5800,
+      rating: 3.9,
+      image: 'https://images.pexels.com/photos/1743229/pexels-photo-1743229.jpeg?auto=compress&cs=tinysrgb&w=800',
+      liked: false,
+      gender: 'unisex',
+      city: 'vizag'
+    },
+    {
+      id: '15',
+      name: 'Steel City PG',
+      address: 'Gajuwaka, Visakhapatnam, Andhra Pradesh 530026',
+      price: 6800,
+      rating: 4.2,
+      image: 'https://images.pexels.com/photos/1571468/pexels-photo-1571468.jpeg?auto=compress&cs=tinysrgb&w=800',
+      liked: false,
+      gender: 'male',
+      city: 'vizag'
+    },
+    {
+      id: '16',
+      name: 'Lighthouse PG',
+      address: 'Kailasagiri, Visakhapatnam, Andhra Pradesh 530005',
+      price: 7500,
+      rating: 4.5,
+      image: 'https://images.pexels.com/photos/1571453/pexels-photo-1571453.jpeg?auto=compress&cs=tinysrgb&w=800',
+      liked: false,
+      gender: 'female',
+      city: 'vizag'
     }
   ];
 
@@ -203,7 +259,8 @@ const PropertyList: React.FC<PropertyListProps> = ({ city, onPropertyView, onBac
       delhi: 'Delhi',
       mumbai: 'Mumbai',
       bengaluru: 'Bengaluru',
-      hyderabad: 'Hyderabad'
+      hyderabad: 'Hyderabad',
+      vizag: 'Vizag'
     };
     return cityMap[cityKey.toLowerCase()] || cityKey;
   };
@@ -239,6 +296,9 @@ const PropertyList: React.FC<PropertyListProps> = ({ city, onPropertyView, onBac
                     </div>
                     <div className="list-group-item border-0 bg-transparent text-center">
                       <strong className="text-teal-600">💎 Hyderabad</strong>
+                    </div>
+                    <div className="list-group-item border-0 bg-transparent text-center">
+                      <strong className="text-teal-600">🏖️ Vizag</strong>
                     </div>
                   </div>
                 </div>

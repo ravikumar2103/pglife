@@ -36,7 +36,9 @@ function App() {
       'mumbai': 'mumbai',
       'bengaluru': 'bengaluru',
       'bangalore': 'bengaluru', // Alternative name
-      'hyderabad': 'hyderabad'
+      'hyderabad': 'hyderabad',
+      'vizag': 'vizag',
+      'visakhapatnam': 'vizag' // Alternative name
     };
 
     const normalizedQuery = searchQuery.trim().toLowerCase();
@@ -84,7 +86,8 @@ function App() {
       delhi: 'Delhi',
       mumbai: 'Mumbai',
       bengaluru: 'Bengaluru',
-      hyderabad: 'Hyderabad'
+      hyderabad: 'Hyderabad',
+      vizag: 'Vizag'
     };
     return cityMap[cityKey] || cityKey;
   };

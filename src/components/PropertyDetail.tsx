@@ -306,8 +306,13 @@ const PropertyDetail: React.FC<PropertyDetailProps> = ({ propertyId, onLoginClic
               {!isAuthenticated ? (
                 <button 
                   onClick={handleBookingClick}
-                  className="btn btn-primary btn-lg px-5 py-3 hover-glow d-flex align-items-center justify-content-center mx-auto"
-                  style={{ maxWidth: '300px' }}
+                  className="btn btn-lg px-5 py-3 hover-glow d-flex align-items-center justify-content-center mx-auto"
+                  style={{ 
+                    maxWidth: '300px',
+                    backgroundColor: 'rgb(25, 135, 84)',
+                    borderColor: 'rgb(25, 135, 84)',
+                    color: 'white'
+                  }}
                 >
                   <LogIn className="me-2" size={20} />
                   Login to Book Now

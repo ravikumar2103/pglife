@@ -37,9 +37,9 @@ const Hero: React.FC<HeroProps> = ({ onCitySearch }) => {
 
   return (
     <div 
-      className="relative min-h-[70vh] w-full bg-cover bg-center bg-no-repeat bg-fixed"
+      className="hero-section relative min-h-[100vh] w-full bg-cover bg-center bg-no-repeat"
       style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/bg.jpg')`,
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/bg copy.jpg')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center center',
         backgroundRepeat: 'no-repeat',

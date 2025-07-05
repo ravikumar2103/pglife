@@ -46,21 +46,25 @@ html {
   z-index: 9999;
 }
 
-/* Hero Background Fix - Ensure background image displays properly */
+/* Hero Background - Ensure complete image display */
 .hero-section {
   background-size: cover !important;
   background-position: center center !important;
   background-repeat: no-repeat !important;
   background-attachment: fixed !important;
-  min-height: 70vh !important;
+  min-height: 100vh !important;
   width: 100% !important;
   position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
 
 /* Mobile background fix - Fixed attachment can cause issues on mobile */
 @media (max-width: 768px) {
   .hero-section {
     background-attachment: scroll !important;
+    min-height: 80vh !important;
   }
 }
 

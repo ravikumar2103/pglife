@@ -46,6 +46,22 @@ html {
   z-index: 9999;
 }
 
+/* Background Image Fix */
+.hero-bg {
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+  min-height: 70vh;
+}
+
+/* Mobile background fix */
+@media (max-width: 768px) {
+  .hero-bg {
+    background-attachment: scroll !important;
+  }
+}
+
 /* Enhanced Card Hover Effects */
 .card {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -74,6 +90,12 @@ html {
   background-color: #059669 !important;
   border-color: #059669 !important;
   box-shadow: 0 8px 25px rgba(5, 150, 105, 0.4);
+}
+
+.btn-primary:hover {
+  background-color: #2563eb !important;
+  border-color: #2563eb !important;
+  box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
 }
 
 .btn-outline-danger:hover {

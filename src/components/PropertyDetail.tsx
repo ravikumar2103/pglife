@@ -13,17 +13,21 @@ import {
   UtensilsCrossed, 
   WashingMachine, 
   Bed, 
-  Thermometer 
+  Thermometer,
+  LogIn
 } from 'lucide-react';
 import PropertyCarousel from './PropertyCarousel';
 import ScrollspyNavigation from './ScrollspyNavigation';
+import { useAuth } from '../hooks/useAuth';
 
 interface PropertyDetailProps {
   propertyId: string;
+  onLoginClick?: () => void;
 }
 
-const PropertyDetail: React.FC<PropertyDetailProps> = ({ propertyId }) => {
+const PropertyDetail: React.FC<PropertyDetailProps> = ({ propertyId, onLoginClick }) => {
   const [isLiked, setIsLiked] = useState(false);
+  const { isAuthenticated } = useAuth();
 
   // Sample property data
   const property = {
@@ -80,6 +84,13 @@ const PropertyDetail: React.FC<PropertyDetailProps> = ({ propertyId }) => {
       default:
         return '⚥';
     }
+  };
+
+  const handleBookingClick = () => {
+    if (!isAuthenticated && onLoginClick) {
+      onLoginClick();
+    }
+    // If user is authenticated, button acts as a dumb button (no action)
   };
 
   return (
@@ -291,9 +302,24 @@ const PropertyDetail: React.FC<PropertyDetailProps> = ({ propertyId }) => {
               <p className="text-muted mb-4">
                 Secure your spot at {property.name} today!
               </p>
-              <button className="btn btn-success btn-lg px-5 py-3 hover-glow">
-                Book Now - ₹ {property.price.toLocaleString()}/month
-              </button>
+              
+              {!isAuthenticated ? (
+                <button 
+                  onClick={handleBookingClick}
+                  className="btn btn-primary btn-lg px-5 py-3 hover-glow d-flex align-items-center justify-content-center mx-auto"
+                  style={{ maxWidth: '300px' }}
+                >
+                  <LogIn className="me-2" size={20} />
+                  Login to Book Now
+                </button>
+              ) : (
+                <button 
+                  onClick={handleBookingClick}
+                  className="btn btn-success btn-lg px-5 py-3 hover-glow"
+                >
+                  Book Now - ₹ {property.price.toLocaleString()}/month
+                </button>
+              )}
             </div>
           </div>
         </section>

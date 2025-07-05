@@ -81,6 +81,10 @@ function App() {
     setShowSignupModal(true);
   };
 
+  const handleLoginClick = () => {
+    setShowLoginModal(true);
+  };
+
   const getCityName = (cityKey: string) => {
     const cityMap: { [key: string]: string } = {
       delhi: 'Delhi',
@@ -134,7 +138,7 @@ function App() {
     <div className="min-h-screen bg-white">
       <Navbar 
         onSignupClick={() => setShowSignupModal(true)}
-        onLoginClick={() => setShowLoginModal(true)}
+        onLoginClick={handleLoginClick}
         onLogoClick={handleBackToHome}
         showBackButton={currentPage !== 'home'}
         onBackClick={currentPage === 'detail' ? handleBackToProperties : handleBackToHome}
@@ -165,6 +169,7 @@ function App() {
       {currentPage === 'detail' && (
         <PropertyDetail 
           propertyId={selectedProperty}
+          onLoginClick={handleLoginClick}
         />
       )}
       

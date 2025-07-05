@@ -39,7 +39,10 @@ const Hero: React.FC<HeroProps> = ({ onCitySearch }) => {
     <div 
       className="relative h-[70vh] bg-cover bg-center bg-no-repeat"
       style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/bg.jpg')`
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/bg.jpg')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center center',
+        backgroundAttachment: 'fixed'
       }}
     >
       <div className="absolute inset-0 flex items-center justify-center">

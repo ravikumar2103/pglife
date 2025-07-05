@@ -37,16 +37,17 @@ const Hero: React.FC<HeroProps> = ({ onCitySearch }) => {
 
   return (
     <div 
-      className="relative h-[70vh] bg-cover bg-center bg-no-repeat"
+      className="relative min-h-[70vh] w-full bg-cover bg-center bg-no-repeat bg-fixed"
       style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/bg.jpg')`,
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/bg.jpg')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center center',
+        backgroundRepeat: 'no-repeat',
         backgroundAttachment: 'fixed'
       }}
     >
-      <div className="absolute inset-0 flex items-center justify-center">
-        <div className="text-center text-white px-4 sm:px-6 lg:px-8">
+      <div className="absolute inset-0 w-full h-full flex items-center justify-center">
+        <div className="text-center text-white px-4 sm:px-6 lg:px-8 w-full max-w-4xl">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-8 hover:scale-105 transition-transform duration-500 cursor-default">
             Happiness per Square Foot
           </h1>

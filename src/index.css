@@ -46,18 +46,44 @@ html {
   z-index: 9999;
 }
 
-/* Background Image Fix */
-.hero-bg {
+/* Hero Background Fix - Ensure background image displays properly */
+.hero-section {
   background-size: cover !important;
   background-position: center center !important;
   background-repeat: no-repeat !important;
   background-attachment: fixed !important;
-  min-height: 70vh;
+  min-height: 70vh !important;
+  width: 100% !important;
+  position: relative !important;
 }
 
-/* Mobile background fix */
+/* Mobile background fix - Fixed attachment can cause issues on mobile */
 @media (max-width: 768px) {
-  .hero-bg {
+  .hero-section {
+    background-attachment: scroll !important;
+  }
+}
+
+/* Ensure the background image loads properly */
+.bg-cover {
+  background-size: cover !important;
+}
+
+.bg-center {
+  background-position: center !important;
+}
+
+.bg-no-repeat {
+  background-repeat: no-repeat !important;
+}
+
+.bg-fixed {
+  background-attachment: fixed !important;
+}
+
+/* Mobile fix for background attachment */
+@media (max-width: 768px) {
+  .bg-fixed {
     background-attachment: scroll !important;
   }
 }

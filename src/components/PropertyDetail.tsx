@@ -309,8 +309,8 @@ const PropertyDetail: React.FC<PropertyDetailProps> = ({ propertyId, onLoginClic
                   className="btn btn-lg px-5 py-3 hover-glow d-flex align-items-center justify-content-center mx-auto"
                   style={{ 
                     maxWidth: '300px',
-                    backgroundColor: 'rgb(0, 128, 128)',
-                    borderColor: 'rgb(0, 128, 128)',
+                    backgroundColor: '#4dc7bc',
+                    borderColor: '#4dc7bc',
                     color: 'white'
                   }}
                 >

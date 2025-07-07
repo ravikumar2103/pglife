@@ -24,9 +24,62 @@ function App() {
     checkAndSeedDatabase().catch(console.error);
   }, []);
 
+  // Browser history management
+  useEffect(() => {
+    const handlePopState = (event: PopStateEvent) => {
+      const state = event.state;
+      
+      if (state) {
+        // Navigate based on browser history state
+        setCurrentPage(state.page);
+        setSelectedCity(state.city || '');
+        setSelectedProperty(state.property || '');
+      } else {
+        // No state means we're at the initial page (home)
+        setCurrentPage('home');
+        setSelectedCity('');
+        setSelectedProperty('');
+      }
+    };
+
+    // Listen for browser back/forward button clicks
+    window.addEventListener('popstate', handlePopState);
+
+    // Set initial state if we're starting fresh
+    if (!window.history.state) {
+      window.history.replaceState(
+        { page: 'home' },
+        'PG Life - Happiness per Square Foot',
+        window.location.pathname
+      );
+    }
+
+    return () => {
+      window.removeEventListener('popstate', handlePopState);
+    };
+  }, []);
+
+  // Push state when navigating programmatically
+  const pushState = (page: string, city?: string, property?: string) => {
+    const state = { page, city: city || '', property: property || '' };
+    let url = '/';
+    let title = 'PG Life - Happiness per Square Foot';
+
+    if (page === 'properties' && city) {
+      url = `/properties/${city}`;
+      title = `PG in ${getCityName(city)} - PG Life`;
+    } else if (page === 'detail' && property) {
+      url = `/property/${property}`;
+      title = `Property Details - PG Life`;
+    }
+
+    window.history.pushState(state, title, url);
+  };
+
   const handleCityClick = (city: string) => {
     setSelectedCity(city);
     setCurrentPage('properties');
+    pushState('properties', city);
   };
 
   const handleCitySearch = (searchQuery: string) => {
@@ -55,22 +108,26 @@ function App() {
     }
     
     setCurrentPage('properties');
+    pushState('properties', cityKey || searchQuery);
   };
 
   const handlePropertyView = (propertyId: string) => {
     setSelectedProperty(propertyId);
     setCurrentPage('detail');
+    pushState('detail', selectedCity, propertyId);
   };
 
   const handleBackToHome = () => {
     setCurrentPage('home');
     setSelectedCity('');
     setSelectedProperty('');
+    pushState('home');
   };
 
   const handleBackToProperties = () => {
     setCurrentPage('properties');
     setSelectedProperty('');
+    pushState('properties', selectedCity);
   };
 
   const switchToLogin = () => {

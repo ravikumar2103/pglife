@@ -176,6 +176,40 @@ html {
   color: #14b8a6 !important;
 }
 
+/* Logo Fixed Size for Mobile */
+.navbar img {
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .navbar img {
+    min-width: 100px !important;
+    max-width: 100px !important;
+    height: 32px !important;
+  }
+  
+  /* Hide text on mobile for auth buttons */
+  .navbar .btn span {
+    display: none;
+  }
+  
+  .navbar .btn {
+    padding: 8px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar img {
+    min-width: 80px !important;
+    max-width: 80px !important;
+    height: 28px !important;
+  }
+  
+  .navbar .btn {
+    padding: 6px 10px;
+  }
+}
+
 /* City Button Enhancements */
 .city-button {
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);

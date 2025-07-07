@@ -200,8 +200,6 @@ function App() {
         onSignupClick={() => setShowSignupModal(true)}
         onLoginClick={handleLoginClick}
         onLogoClick={handleBackToHome}
-        showBackButton={currentPage !== 'home'}
-        onBackClick={currentPage === 'detail' ? handleBackToProperties : handleBackToHome}
       />
       
       {/* Breadcrumb Navigation */}

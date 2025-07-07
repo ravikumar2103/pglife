@@ -38,7 +38,7 @@ const cities = [
   { 
     name: 'VIZAG', 
     key: 'vizag',
-    image: '/vizagcopy.png',
+    image: '/vizag.png',
     alt: 'Lighthouse - Vizag'
   }
 ];

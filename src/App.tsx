@@ -37,6 +37,8 @@ function App() {
       'bengaluru': 'bengaluru',
       'bangalore': 'bengaluru', // Alternative name
       'hyderabad': 'hyderabad',
+      'chennai': 'chennai',
+      'madras': 'chennai', // Alternative name
       'vizag': 'vizag',
       'visakhapatnam': 'vizag' // Alternative name
     };
@@ -91,6 +93,7 @@ function App() {
       mumbai: 'Mumbai',
       bengaluru: 'Bengaluru',
       hyderabad: 'Hyderabad',
+      chennai: 'Chennai',
       vizag: 'Vizag'
     };
     return cityMap[cityKey] || cityKey;

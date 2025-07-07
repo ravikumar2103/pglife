@@ -24,7 +24,7 @@ const PropertyList: React.FC<PropertyListProps> = ({ city, onPropertyView, onBac
   const [likedProperties, setLikedProperties] = useState<Set<string>>(new Set());
 
   // Available cities
-  const availableCities = ['delhi', 'mumbai', 'bengaluru', 'hyderabad', 'vizag'];
+  const availableCities = ['delhi', 'mumbai', 'bengaluru', 'hyderabad', 'chennai', 'vizag'];
   
   // Check if the searched city is available
   const isCityAvailable = availableCities.includes(city.toLowerCase());
@@ -155,6 +155,73 @@ const PropertyList: React.FC<PropertyListProps> = ({ city, onPropertyView, onBac
       gender: 'female',
       city: 'hyderabad'
     },
+    // Chennai properties
+    {
+      id: '17',
+      name: 'Marina Beach PG',
+      address: 'Marina Beach Road, Chennai, Tamil Nadu 600001',
+      price: 8200,
+      rating: 4.3,
+      image: 'https://images.pexels.com/photos/271618/pexels-photo-271618.jpeg?auto=compress&cs=tinysrgb&w=800',
+      liked: false,
+      gender: 'male',
+      city: 'chennai'
+    },
+    {
+      id: '18',
+      name: 'T Nagar Ladies PG',
+      address: 'T Nagar, Chennai, Tamil Nadu 600017',
+      price: 7500,
+      rating: 4.4,
+      image: 'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=800',
+      liked: false,
+      gender: 'female',
+      city: 'chennai'
+    },
+    {
+      id: '19',
+      name: 'Anna Nagar PG',
+      address: 'Anna Nagar, Chennai, Tamil Nadu 600040',
+      price: 9000,
+      rating: 4.5,
+      image: 'https://images.pexels.com/photos/1743229/pexels-photo-1743229.jpeg?auto=compress&cs=tinysrgb&w=800',
+      liked: false,
+      gender: 'unisex',
+      city: 'chennai'
+    },
+    {
+      id: '20',
+      name: 'Velachery IT PG',
+      address: 'Velachery, Chennai, Tamil Nadu 600042',
+      price: 8800,
+      rating: 4.2,
+      image: 'https://images.pexels.com/photos/1571468/pexels-photo-1571468.jpeg?auto=compress&cs=tinysrgb&w=800',
+      liked: false,
+      gender: 'male',
+      city: 'chennai'
+    },
+    {
+      id: '21',
+      name: 'Adyar Premium PG',
+      address: 'Adyar, Chennai, Tamil Nadu 600020',
+      price: 10500,
+      rating: 4.6,
+      image: 'https://images.pexels.com/photos/1571453/pexels-photo-1571453.jpeg?auto=compress&cs=tinysrgb&w=800',
+      liked: false,
+      gender: 'female',
+      city: 'chennai'
+    },
+    {
+      id: '22',
+      name: 'Mylapore Heritage PG',
+      address: 'Mylapore, Chennai, Tamil Nadu 600004',
+      price: 7800,
+      rating: 4.1,
+      image: 'https://images.pexels.com/photos/271618/pexels-photo-271618.jpeg?auto=compress&cs=tinysrgb&w=800',
+      liked: false,
+      gender: 'unisex',
+      city: 'chennai'
+    },
     // Vizag properties
     {
       id: '12',
@@ -260,6 +327,7 @@ const PropertyList: React.FC<PropertyListProps> = ({ city, onPropertyView, onBac
       mumbai: 'Mumbai',
       bengaluru: 'Bengaluru',
       hyderabad: 'Hyderabad',
+      chennai: 'Chennai',
       vizag: 'Vizag'
     };
     return cityMap[cityKey.toLowerCase()] || cityKey;
@@ -296,6 +364,9 @@ const PropertyList: React.FC<PropertyListProps> = ({ city, onPropertyView, onBac
                     </div>
                     <div className="list-group-item border-0 bg-transparent text-center">
                       <strong className="text-teal-600">💎 Hyderabad</strong>
+                    </div>
+                    <div className="list-group-item border-0 bg-transparent text-center">
+                      <strong className="text-teal-600">🏛️ Chennai</strong>
                     </div>
                     <div className="list-group-item border-0 bg-transparent text-center">
                       <strong className="text-teal-600">🏖️ Vizag</strong>

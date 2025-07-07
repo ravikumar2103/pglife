@@ -188,6 +188,226 @@ const sampleProperties: Omit<Property, 'id' | 'createdAt' | 'updatedAt'>[] = [
     ownerId: 'sample-owner-5',
     isActive: true
   },
+  // Chennai Properties
+  {
+    name: 'Marina Beach PG',
+    address: 'Marina Beach Road, Chennai, Tamil Nadu 600001',
+    city: 'chennai',
+    price: 8200,
+    rating: 4.3,
+    images: [
+      'https://images.pexels.com/photos/271618/pexels-photo-271618.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      'https://images.pexels.com/photos/1743229/pexels-photo-1743229.jpeg?auto=compress&cs=tinysrgb&w=1200'
+    ],
+    gender: 'male',
+    amenities: {
+      building: [
+        { name: 'Power Backup', available: true },
+        { name: 'Fire Extinguisher', available: true },
+        { name: 'Lift', available: true },
+        { name: 'CCTV', available: true }
+      ],
+      commonArea: [
+        { name: 'WiFi', available: true },
+        { name: 'TV', available: true },
+        { name: 'Water Purifier', available: true },
+        { name: 'Dining', available: true },
+        { name: 'Washing Machine', available: true }
+      ],
+      bedroom: [
+        { name: 'Bed with Mattress', available: true }
+      ],
+      washroom: [
+        { name: 'Geyser', available: true }
+      ]
+    },
+    description: 'Premium PG accommodation near Marina Beach with excellent connectivity to IT corridors.',
+    ownerId: 'sample-owner-11',
+    isActive: true
+  },
+  {
+    name: 'T Nagar Ladies PG',
+    address: 'T Nagar, Chennai, Tamil Nadu 600017',
+    city: 'chennai',
+    price: 7500,
+    rating: 4.4,
+    images: [
+      'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      'https://images.pexels.com/photos/271618/pexels-photo-271618.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      'https://images.pexels.com/photos/1571468/pexels-photo-1571468.jpeg?auto=compress&cs=tinysrgb&w=1200'
+    ],
+    gender: 'female',
+    amenities: {
+      building: [
+        { name: 'Power Backup', available: true },
+        { name: 'Fire Extinguisher', available: true },
+        { name: 'Lift', available: true },
+        { name: 'CCTV', available: true }
+      ],
+      commonArea: [
+        { name: 'WiFi', available: true },
+        { name: 'TV', available: true },
+        { name: 'Water Purifier', available: true },
+        { name: 'Dining', available: true },
+        { name: 'Washing Machine', available: true }
+      ],
+      bedroom: [
+        { name: 'Bed with Mattress', available: true }
+      ],
+      washroom: [
+        { name: 'Geyser', available: true }
+      ]
+    },
+    description: 'Safe and secure accommodation for girls in the heart of T Nagar shopping district.',
+    ownerId: 'sample-owner-12',
+    isActive: true
+  },
+  {
+    name: 'Anna Nagar PG',
+    address: 'Anna Nagar, Chennai, Tamil Nadu 600040',
+    city: 'chennai',
+    price: 9000,
+    rating: 4.5,
+    images: [
+      'https://images.pexels.com/photos/1743229/pexels-photo-1743229.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      'https://images.pexels.com/photos/1571453/pexels-photo-1571453.jpeg?auto=compress&cs=tinysrgb&w=1200'
+    ],
+    gender: 'unisex',
+    amenities: {
+      building: [
+        { name: 'Power Backup', available: true },
+        { name: 'Fire Extinguisher', available: true },
+        { name: 'Lift', available: true },
+        { name: 'CCTV', available: true }
+      ],
+      commonArea: [
+        { name: 'WiFi', available: true },
+        { name: 'TV', available: true },
+        { name: 'Water Purifier', available: true },
+        { name: 'Dining', available: true },
+        { name: 'Washing Machine', available: true }
+      ],
+      bedroom: [
+        { name: 'Bed with Mattress', available: true }
+      ],
+      washroom: [
+        { name: 'Geyser', available: true }
+      ]
+    },
+    description: 'Modern PG accommodation in the upscale Anna Nagar area with excellent amenities.',
+    ownerId: 'sample-owner-13',
+    isActive: true
+  },
+  {
+    name: 'Velachery IT PG',
+    address: 'Velachery, Chennai, Tamil Nadu 600042',
+    city: 'chennai',
+    price: 8800,
+    rating: 4.2,
+    images: [
+      'https://images.pexels.com/photos/1571468/pexels-photo-1571468.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      'https://images.pexels.com/photos/271618/pexels-photo-271618.jpeg?auto=compress&cs=tinysrgb&w=1200'
+    ],
+    gender: 'male',
+    amenities: {
+      building: [
+        { name: 'Power Backup', available: true },
+        { name: 'Fire Extinguisher', available: true },
+        { name: 'Lift', available: true },
+        { name: 'CCTV', available: true }
+      ],
+      commonArea: [
+        { name: 'WiFi', available: true },
+        { name: 'TV', available: true },
+        { name: 'Water Purifier', available: true },
+        { name: 'Dining', available: true },
+        { name: 'Washing Machine', available: true }
+      ],
+      bedroom: [
+        { name: 'Bed with Mattress', available: true }
+      ],
+      washroom: [
+        { name: 'Geyser', available: true }
+      ]
+    },
+    description: 'Convenient PG accommodation in Velachery, close to major IT companies and OMR.',
+    ownerId: 'sample-owner-14',
+    isActive: true
+  },
+  {
+    name: 'Adyar Premium PG',
+    address: 'Adyar, Chennai, Tamil Nadu 600020',
+    city: 'chennai',
+    price: 10500,
+    rating: 4.6,
+    images: [
+      'https://images.pexels.com/photos/1571453/pexels-photo-1571453.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      'https://images.pexels.com/photos/1743229/pexels-photo-1743229.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1200'
+    ],
+    gender: 'female',
+    amenities: {
+      building: [
+        { name: 'Power Backup', available: true },
+        { name: 'Fire Extinguisher', available: true },
+        { name: 'Lift', available: true },
+        { name: 'CCTV', available: true }
+      ],
+      commonArea: [
+        { name: 'WiFi', available: true },
+        { name: 'TV', available: true },
+        { name: 'Water Purifier', available: true },
+        { name: 'Dining', available: true },
+        { name: 'Washing Machine', available: true }
+      ],
+      bedroom: [
+        { name: 'Bed with Mattress', available: true }
+      ],
+      washroom: [
+        { name: 'Geyser', available: true }
+      ]
+    },
+    description: 'Luxury PG accommodation for girls in the prestigious Adyar area with top-notch amenities.',
+    ownerId: 'sample-owner-15',
+    isActive: true
+  },
+  {
+    name: 'Mylapore Heritage PG',
+    address: 'Mylapore, Chennai, Tamil Nadu 600004',
+    city: 'chennai',
+    price: 7800,
+    rating: 4.1,
+    images: [
+      'https://images.pexels.com/photos/271618/pexels-photo-271618.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1200'
+    ],
+    gender: 'unisex',
+    amenities: {
+      building: [
+        { name: 'Power Backup', available: true },
+        { name: 'Fire Extinguisher', available: true },
+        { name: 'Lift', available: false },
+        { name: 'CCTV', available: true }
+      ],
+      commonArea: [
+        { name: 'WiFi', available: true },
+        { name: 'TV', available: true },
+        { name: 'Water Purifier', available: true },
+        { name: 'Dining', available: true },
+        { name: 'Washing Machine', available: false }
+      ],
+      bedroom: [
+        { name: 'Bed with Mattress', available: true }
+      ],
+      washroom: [
+        { name: 'Geyser', available: true }
+      ]
+    },
+    description: 'Traditional PG accommodation in the cultural heart of Chennai, near temples and heritage sites.',
+    ownerId: 'sample-owner-16',
+    isActive: true
+  },
   // Vizag Properties
   {
     name: 'Beach View PG',

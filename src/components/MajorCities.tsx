@@ -30,6 +30,12 @@ const cities = [
     alt: 'Charminar - Hyderabad'
   },
   { 
+    name: 'CHENNAI', 
+    key: 'chennai',
+    image: '/chennai.png',
+    alt: 'Marina Beach - Chennai'
+  },
+  { 
     name: 'VIZAG', 
     key: 'vizag',
     image: '/vizag.png',
@@ -45,7 +51,7 @@ const MajorCities: React.FC<MajorCitiesProps> = ({ onCityClick }) => {
           Major Cities
         </h2>
         
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-12">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 lg:gap-12">
           {cities.map((city) => (
             <div key={city.key} className="text-center">
               <button

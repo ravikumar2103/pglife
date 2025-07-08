@@ -188,11 +188,6 @@ html {
     height: 32px !important;
   }
   
-  /* Hide text on mobile for auth buttons */
-  .navbar .btn span {
-    display: none;
-  }
-  
   .navbar .btn {
     padding: 8px 12px;
   }

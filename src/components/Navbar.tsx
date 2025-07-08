@@ -79,14 +79,14 @@ const Navbar: React.FC<NavbarProps> = ({
                   className="flex items-center space-x-1 px-4 py-2 text-gray-600 hover:text-teal-600 transition-all duration-300 rounded-lg hover:bg-teal-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-300"
                 >
                   <User className="h-4 w-4 transition-transform duration-300 hover:scale-110" />
-                  <span className="font-medium hidden sm:inline">Signup</span>
+                  <span className="font-medium">Signup</span>
                 </button>
                 <button
                   onClick={onLoginClick}
                   className="flex items-center space-x-1 px-4 py-2 text-gray-600 hover:text-teal-600 transition-all duration-300 rounded-lg hover:bg-teal-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-300"
                 >
                   <LogIn className="h-4 w-4 transition-transform duration-300 hover:scale-110" />
-                  <span className="font-medium hidden sm:inline">Login</span>
+                  <span className="font-medium">Login</span>
                 </button>
               </>
             )}

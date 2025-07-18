@@ -79,14 +79,16 @@ const sampleProperties: Omit<Property, 'id' | 'createdAt' | 'updatedAt'>[] = [
   },
   // Delhi Properties
   {
-    name: 'Delhi Central PG',
-    address: 'Connaught Place, New Delhi, Delhi 110001',
+    name: 'Ashray Living',
+    address: '16, Bungalow Road Opposite GBSSS No.1 Roop Nagar, Kamla Nagar, New Delhi, Delhi 110007',
     city: 'delhi',
     price: 8500,
     rating: 4.3,
     images: [
-      'https://images.pexels.com/photos/1743229/pexels-photo-1743229.jpeg?auto=compress&cs=tinysrgb&w=1200',
-      'https://images.pexels.com/photos/1571468/pexels-photo-1571468.jpeg?auto=compress&cs=tinysrgb&w=1200'
+      '/2022-12-19.jpg',
+      '/2023-07-20 (1).jpg',
+      '/2023-07-20.jpg',
+      '/2025-06-05.jpg'
     ],
     gender: 'unisex',
     amenities: {
@@ -110,7 +112,7 @@ const sampleProperties: Omit<Property, 'id' | 'createdAt' | 'updatedAt'>[] = [
         { name: 'Geyser', available: true }
       ]
     },
-    description: 'Premium PG accommodation in the heart of Delhi with excellent connectivity.',
+    description: 'Premium PG accommodation in Kamla Nagar, Delhi with excellent connectivity and modern amenities.',
     ownerId: 'sample-owner-3',
     isActive: true
   },

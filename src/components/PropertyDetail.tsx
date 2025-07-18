@@ -29,25 +29,93 @@ const PropertyDetail: React.FC<PropertyDetailProps> = ({ propertyId, onLoginClic
   const [isLiked, setIsLiked] = useState(false);
   const { isAuthenticated } = useAuth();
 
-  // Sample property data
-  const property = {
-    id: propertyId,
-    name: 'Navkar Paying Guest',
-    address: 'Andheri East, Mumbai, Maharashtra 400069',
-    price: 9500,
-    rating: 4.2,
-    gender: 'male',
-    images: [
-      'https://images.pexels.com/photos/271618/pexels-photo-271618.jpeg?auto=compress&cs=tinysrgb&w=1200',
-      'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1200',
-      'https://images.pexels.com/photos/1743229/pexels-photo-1743229.jpeg?auto=compress&cs=tinysrgb&w=1200',
-      'https://images.pexels.com/photos/1571468/pexels-photo-1571468.jpeg?auto=compress&cs=tinysrgb&w=1200'
-    ],
+  // Property data based on propertyId
+  const getPropertyData = (id: string) => {
+    if (id === '6') {
+      // Ashray Living - Delhi
+      return {
+        id: id,
+        name: 'Ashray Living',
+        address: '16, Bungalow Road Opposite GBSSS No.1 Roop Nagar, Kamla Nagar, New Delhi, Delhi 110007',
+        price: 8500,
+        rating: 4.3,
+        gender: 'unisex',
+        images: [
+          '/2022-12-19.jpg',
+          '/2023-07-20 (1).jpg',
+          '/2023-07-20.jpg',
+          '/2025-06-05.jpg'
+        ],
+        amenities: {
+          building: [
+            { name: 'Power Backup', icon: Shield, available: true },
+            { name: 'Fire Extinguisher', icon: Flame, available: true },
+            { name: 'Lift', icon: ArrowUp, available: true },
+            { name: 'CCTV', icon: Camera, available: true }
+          ],
+          commonArea: [
+            { name: 'WiFi', icon: Wifi, available: true },
+            { name: 'TV', icon: Tv, available: true },
+            { name: 'Water Purifier', icon: Droplets, available: true },
+            { name: 'Dining', icon: UtensilsCrossed, available: true },
+            { name: 'Washing Machine', icon: WashingMachine, available: true }
+          ],
+          bedroom: [
+            { name: 'Bed with Mattress', icon: Bed, available: true }
+          ],
+          washroom: [
+            { name: 'Geyser', icon: Thermometer, available: true }
+          ]
+        }
+      };
+    } else {
+      // Default property (Navkar Paying Guest)
+      return {
+        id: id,
+        name: 'Navkar Paying Guest',
+        address: 'Andheri East, Mumbai, Maharashtra 400069',
+        price: 9500,
+        rating: 4.2,
+        gender: 'male',
+        images: [
+          'https://images.pexels.com/photos/271618/pexels-photo-271618.jpeg?auto=compress&cs=tinysrgb&w=1200',
+          'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1200',
+          'https://images.pexels.com/photos/1743229/pexels-photo-1743229.jpeg?auto=compress&cs=tinysrgb&w=1200',
+          'https://images.pexels.com/photos/1571468/pexels-photo-1571468.jpeg?auto=compress&cs=tinysrgb&w=1200'
+        ],
+        amenities: {
+          building: [
+            { name: 'Power Backup', icon: Shield, available: true },
+            { name: 'Fire Extinguisher', icon: Flame, available: true },
+            { name: 'Lift', icon: ArrowUp, available: false },
+            { name: 'CCTV', icon: Camera, available: true }
+          ],
+          commonArea: [
+            { name: 'WiFi', icon: Wifi, available: true },
+            { name: 'TV', icon: Tv, available: true },
+            { name: 'Water Purifier', icon: Droplets, available: true },
+            { name: 'Dining', icon: UtensilsCrossed, available: true },
+            { name: 'Washing Machine', icon: WashingMachine, available: false }
+          ],
+          bedroom: [
+            { name: 'Bed with Mattress', icon: Bed, available: true }
+          ],
+          washroom: [
+            { name: 'Geyser', icon: Thermometer, available: true }
+          ]
+        }
+      };
+    }
+  };
+
+  const property = getPropertyData(propertyId);
+
+  const propertyAmenities = {
     amenities: {
       building: [
         { name: 'Power Backup', icon: Shield, available: true },
         { name: 'Fire Extinguisher', icon: Flame, available: true },
-        { name: 'Lift', icon: ArrowUp, available: false },
+        { name: 'Lift', icon: ArrowUp, available: property.id === '6' ? true : false },
         { name: 'CCTV', icon: Camera, available: true }
       ],
       commonArea: [
@@ -55,7 +123,7 @@ const PropertyDetail: React.FC<PropertyDetailProps> = ({ propertyId, onLoginClic
         { name: 'TV', icon: Tv, available: true },
         { name: 'Water Purifier', icon: Droplets, available: true },
         { name: 'Dining', icon: UtensilsCrossed, available: true },
-        { name: 'Washing Machine', icon: WashingMachine, available: false }
+        { name: 'Washing Machine', icon: WashingMachine, available: property.id === '6' ? true : false }
       ],
       bedroom: [
         { name: 'Bed with Mattress', icon: Bed, available: true }
@@ -184,7 +252,7 @@ const PropertyDetail: React.FC<PropertyDetailProps> = ({ propertyId, onLoginClic
                     Building
                   </h3>
                   <div className="list-group list-group-flush">
-                    {property.amenities.building.map((amenity, index) => (
+                    {propertyAmenities.amenities.building.map((amenity, index) => (
                       <div key={index} className="amenity-item list-group-item border-0 px-0 py-2">
                         <div className="d-flex align-items-center">
                           <amenity.icon 
@@ -212,7 +280,7 @@ const PropertyDetail: React.FC<PropertyDetailProps> = ({ propertyId, onLoginClic
                     Common Area
                   </h3>
                   <div className="list-group list-group-flush">
-                    {property.amenities.commonArea.map((amenity, index) => (
+                    {propertyAmenities.amenities.commonArea.map((amenity, index) => (
                       <div key={index} className="amenity-item list-group-item border-0 px-0 py-2">
                         <div className="d-flex align-items-center">
                           <amenity.icon 
@@ -240,7 +308,7 @@ const PropertyDetail: React.FC<PropertyDetailProps> = ({ propertyId, onLoginClic
                     Bedroom
                   </h3>
                   <div className="list-group list-group-flush">
-                    {property.amenities.bedroom.map((amenity, index) => (
+                    {propertyAmenities.amenities.bedroom.map((amenity, index) => (
                       <div key={index} className="amenity-item list-group-item border-0 px-0 py-2">
                         <div className="d-flex align-items-center">
                           <amenity.icon 
@@ -268,7 +336,7 @@ const PropertyDetail: React.FC<PropertyDetailProps> = ({ propertyId, onLoginClic
                     Washroom
                   </h3>
                   <div className="list-group list-group-flush">
-                    {property.amenities.washroom.map((amenity, index) => (
+                    {propertyAmenities.amenities.washroom.map((amenity, index) => (
                       <div key={index} className="amenity-item list-group-item border-0 px-0 py-2">
                         <div className="d-flex align-items-center">
                           <amenity.icon 

@@ -85,8 +85,9 @@ const sampleProperties: Omit<Property, 'id' | 'createdAt' | 'updatedAt'>[] = [
     price: 8500,
     rating: 4.3,
     images: [
-      'https://images.pexels.com/photos/1743229/pexels-photo-1743229.jpeg?auto=compress&cs=tinysrgb&w=1200',
-      'https://images.pexels.com/photos/1571468/pexels-photo-1571468.jpeg?auto=compress&cs=tinysrgb&w=1200'
+      '/chennai.png',
+      'https://images.pexels.com/photos/1571468/pexels-photo-1571468.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      'https://images.pexels.com/photos/1743229/pexels-photo-1743229.jpeg?auto=compress&cs=tinysrgb&w=1200'
     ],
     gender: 'unisex',
     amenities: {

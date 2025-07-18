@@ -93,7 +93,7 @@ const PropertyList: React.FC<PropertyListProps> = ({ city, onPropertyView, onBac
       address: 'Connaught Place, New Delhi, Delhi 110001',
       price: 8500,
       rating: 4.3,
-      image: 'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: '/chennai.png',
       liked: false,
       gender: 'unisex',
       city: 'delhi'
